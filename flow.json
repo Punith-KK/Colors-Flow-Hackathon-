@@ -1,0 +1,64 @@
+
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"ColorItems": {
+			"source": "./contracts/ColorItems.cdc",
+			"aliases": {
+				"testnet": "0x631e88ae7f1d7c20"
+			}
+		},
+		"Profile": {
+			"source": "./contracts/Profile.cdc",
+			"aliases": {
+				"testnet": "0x631e88ae7f1d7c20"
+			}
+		},
+		"FungibleToken": {
+			"source": "./contracts/FungibleToken.cdc",
+			"aliases": {
+				"testnet": "9a0766d93b6608b7",
+				"emulator": "ee82856bf20e2aa6"
+			}
+		},
+		"MarketplaceContract": "./contracts/MarketplaceContract.cdc"
+		
+
+   },
+	"networks": {
+		"emulator": {
+			"host": "127.0.0.1:3569",
+			"chain": "flow-emulator"
+		},
+		"testnet": {
+		  "host": "access.testnet.nodes.onflow.org:9000",
+		  "chain": "flow-testnet"
+		}
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"keys": "592a0137146dac530d86ef344f626f7bd242b974e3f8f779ac517de53bc61648",
+			"chain": "flow-emulator",
+			"sigAlgorithm": "ECDSA_P256",
+     		"hashAlgorithm": "SHA3_256"
+		},
+		"testnet-account": {
+			"address": "0xd929bd6c5ce17fe1",
+			"keys": "d9a08f7f58c5b8e13a424b64544fcd5afd8974d227df1b4ace9401b73b3023f7"
+		}
+	},
+	"deployments": {
+		"testnet": {
+			 "testnet-account": ["ColorItems", "Profile", "FungibleToken", "MarketplaceContract"]
+		},
+		"emulator": {
+			"emulator-account": ["ColorItems", "FungibleToken", "Profile", "MarketplaceContract" ]
+	   }
+   }
+}
