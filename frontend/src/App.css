@@ -1,0 +1,61 @@
+
+
+button {
+  padding: 10;
+  height: 30px;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  border: none;
+  background: rgb(255, 224, 0);
+  color: #282828;
+}
+
+.btn-secondary {
+  border: none;
+  background: rgb(0, 190, 221);
+  color: #282828;
+}
+
+.center {
+  text-align: center;
+}
+
+.token-data {
+  margin-top: 100px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li span {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li span:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
